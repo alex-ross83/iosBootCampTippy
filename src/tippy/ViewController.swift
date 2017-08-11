@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,7 +46,31 @@ class ViewController: UIViewController {
     @IBAction func tipAmountChanged(_ sender: Any) {
         calculateTip(sender)
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("view will appear")
+        let defaults = UserDefaults.standard
+        let intValue = defaults.integer(forKey: "defaultTip")
+        
+        tipOptions.selectedSegmentIndex = intValue
+        
+        calculateTip(animated)
+    }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("view did appear")
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("view will disappear")
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        print("view did disappear")
+    }
 
 
 }
