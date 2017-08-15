@@ -27,7 +27,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-![](http://i.imgur.com/C2EWqbF.gifv)
+![User Stories](http://i.imgur.com/KSpMBe7.gif)
 
 ## Project Analysis
 
